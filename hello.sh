@@ -6,5 +6,5 @@ echo "Date : $(date)"
 echo "installing Updates"
 sudo apt update -y
 sudo apt install -y nginx
-nginx --version
+nginx -version
 echo "Update success"
