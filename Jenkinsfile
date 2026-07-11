@@ -20,10 +20,13 @@ pipeline {
     post {
         success {
             echo "Pipeline passed"
+            mail to : "arvind12974@gmail.com",
+            subject : "SUCCESS",
+            body:"EMAIL WORKING" 
         }
 
         failure {
-            echo "Pipeline failed"
+            echo "Pipeline failed"   
         }
 
         always {
