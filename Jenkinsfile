@@ -16,4 +16,18 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo "Pipeline passed"
+        }
+
+        failure {
+            echo "Pipeline failed"
+        }
+
+        always {
+            echo "Pipeline execution completed"
+        }
+    }
 }
