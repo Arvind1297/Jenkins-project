@@ -21,12 +21,12 @@ pipeline {
         success {
             echo "Pipeline passed"
             mail to : "arvind12974@gmail.com",
-            subject : "SUCCESS",
-            body:"EMAIL WORKING" 
+            subject : "SUCCESS : job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' ",
+            body:" '${env.JOB_NAME}' Build Succeeded. \n Check Build URL : '${env.BUILD_URL}' "
         }
 
         failure {
-            echo "Pipeline failed"   
+            echo "Pipeline failed"
         }
 
         always {
